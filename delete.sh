@@ -1,3 +1,3 @@
 rm -rf dev_releases/
 
-bosh delete-release paasta-conf/1.0.0
+bosh delete-release ap-conf/1.0.0

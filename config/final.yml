@@ -1,6 +1,6 @@
 ---
-final_name: paasta-conf
+final_name: ap-conf
 blobstore:
   provider: s3
   options:
-    bucket_name: paasta-conf
+    bucket_name: ap-conf

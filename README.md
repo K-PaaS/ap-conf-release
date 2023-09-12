@@ -1,6 +1,6 @@
-## PaaS-TA Configuration Release
+## Application Platform Configuration Release
 
-Enables configuration of a typical PaaS-TA:
+Enables configuration of a typical Application Platform:
 
 - customize script (job: `common_script`)
   - Note: pre-start, post-deploy, post-start
@@ -16,7 +16,7 @@ Include the release:
 
 ```yaml
 releases:
-  name: paasta-conf
+  name: ap-conf
   version: latest
 ```
 
@@ -29,7 +29,7 @@ In this example, we configure our BOSH deployment manifest to update the tomcat 
   path: /instance_groups/name=uaa/jobs/-
   value:
     name: common_script
-    release: paasta-conf
+    release: ap-conf
     properties:
       post_deploy_script: |-
         #!/bin/bash
@@ -39,7 +39,7 @@ In this example, we configure our BOSH deployment manifest to update the tomcat 
   path: /instance_groups/name=uaa/jobs/-
   value:
     name: tomcat_conf
-    release: paasta-conf
+    release: ap-conf
     properties:
       cce_enable: true
 ```
