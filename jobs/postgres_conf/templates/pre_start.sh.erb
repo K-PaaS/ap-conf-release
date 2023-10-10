@@ -1,7 +1,7 @@
 #!/bin/bash
 
   #본 postgres_conf job은 bosh package postgres 에 맞추어 설정되어 있음 
-  #타 서비스에서 사용할 경우 paasta_db_conf job을 활용하여 사용하길 권장함
+  #타 서비스에서 사용할 경우 ap_db_conf job을 활용하여 사용하길 권장함
   postgresVersion=$(find /var/vcap/data/packages/ -name postgres-* | cut -d - -f 2 | sort -nr | head -n 1)
   PACKAGE_DIR="/var/vcap/packages/postgres-${postgresVersion}"
   JOB_DIR="/var/vcap/jobs/postgres-cce"
